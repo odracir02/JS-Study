@@ -1,4 +1,5 @@
-
+//console.log("---------------------- Exercise 1 ----------------------");
+//Promise with array
 
 let data = [
     {name: "Nacho", telefon: "966112233", age: 40},
@@ -30,3 +31,22 @@ let promiseDeletePerson = new Promise((resolve,reject)=>{
         
     }
 });
+
+//console.log("---------------------- Exercise 2 ----------------------");
+//heads or tails
+
+let headstails = new Promise ((resolve, reject)=>{
+    n = Math.floor(Math.random()*2);
+    if (n==0) {
+        resolve("heads")
+    }else{
+        reject("Tails")
+    }
+});
+
+headstails.then(result=>{
+    console.log(result)
+})
+.catch(error=>{
+    console.log(error)
+})
