@@ -78,9 +78,7 @@ Ftax("Glass", 15, 21);
 Ftax("House", "siu", 21);
 Ftax("Ant", 0.01, 250);
 
-//console.log("---------------------- Exercise 5 ----------------------");
-
-console.log("---------------------- Exercise 6 ----------------------");
+console.log("---------------------- Exercise 5 ----------------------");
 
 //Create an array
 let Test = [1, 2, 3, 4];
@@ -98,21 +96,16 @@ console.log(Test + "\n");
 //Print the array but separating with "==>"
 console.log(Test.join(" ==> ") + "\n");
 
-console.log("---------------------- Exercise 7 ----------------------");
+console.log("---------------------- Exercise 6 ----------------------");
+//Grade point average
+let media = (Name, ...punctuation) => {
+  let max = punctuation.length;
 
-let media = (Name, ...punctuation) =>{
+  console.log(
+    Name +
+      " " +
+      punctuation.reduce((total, punctuation) => total + punctuation, 0) / max
+  );
+};
 
-  let max = punctuation.length
-
-  console.log(Name+" "+punctuation.reduce((total, punctuation) => total + punctuation, 0)/max); 
-
-} 
-
-media("Ricardo", 6,6,8,9,5,7) 
-  
-
-
-
-
-
-
+media("Ricardo", 6, 6, 8, 9, 5, 7);
