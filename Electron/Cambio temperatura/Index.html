@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <title>Temperatura</title>
+  </head>
 
-<head>
- <meta charset="UTF-8">
- <title>Hello Grid</title>
- <script language="JavaScript" type="text/javascript" src="./functions.js"></script>
- <link rel="stylesheet" href="./css/estilos.css">
-</head>
-
-<body>
-  <h1>Conversor temperatura</h1>
- <div class="estilos">
-    <div>Grados celsius</div>
-    <div><input id="text1" type="text" value=""></div>
-    <div>grados kelvin</div>
-    <div><input id="text1" type="text" value=""></div>
-    <div><button type="button" id="calcular">Calcular</button></div>
-    <div><button type="button" id="limpiar">Limpiar</button></div>
- </div>
-</body>
-
+  <body>
+    <div class="estilos">
+      <div><p>Grados Celsius:</p></div>
+      <div>
+        <div>
+          <input
+            type="number"
+            name="celsius"
+            placeholder="Celsius"
+            id="celsius"
+          />
+        </div>
+      </div>
+      <div><p>Grados Kelvin:</p></div>
+      <div>
+        <div>
+          <input type="number" name="kelvin" placeholder="Kelvin" id="kelvin" />
+        </div>
+      </div>
+      <div>
+        <button id="convertir">Convertir</button>
+      </div>
+      <div>
+        <button id="limpiar">Limpiar</button>
+      </div>
+    </div>
+    <script src="./functions.js"></script>
+  </body>
 </html>
