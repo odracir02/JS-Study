@@ -1,5 +1,5 @@
 {
-  "name": "pedidospizzaclase",
+  "name": "ahorcado",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@electron/remote": "^2.0.8",
-    "electron": "^21.2.2",
-    "html-pdf": "^3.0.1"
+    "electron": "^21.2.2"
   }
 }

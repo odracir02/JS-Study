@@ -1,139 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/photon.min.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Pedidos Pizza</title>
+    <link rel="stylesheet" href="./css/photon.min.css">
+	<link rel="stylesheet" href="./css/estilos.css">
+
 </head>
 
 <body>
     <div class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title" id="muestra">Haga su pedido</h1>
+        </header>
+        <!--Contenido principal-->
         <div class="window-content">
             <div class="pane-group">
-                <div class="pane">
-                    <div class="padded-more">
-                        <img class="img-circle media-object pull-left" src="./images/1.png" width="32"
-                            height="32" /><br /><br />
-                        <div class="form-group">
-                            <span class="icon icon-user"></span>
-                            <input type="text" class="form-control" id="dni" name="dni" placeholder="Nombre cliente"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <span class="icon icon-phone"></span>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Telefon cliente"
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <span class="icon icon-address"></span>
-                            <input type="text" class="form-control" id="telephone" name="telephone"
-                                placeholder="Direccion cliente" required />
-                        </div>
-                    </div>
+                <div class="pane" id="separacion3">
+					<h1>
+					<img class="img-circle media-object pull-left" src="./images/1.png" width="32" height="32">
+					</h1>
+					<span class="icon icon-user"></span>
+					<input type="text" id="nombre" class="form-control" placeholder="nombre cliente">
+					<span class="icon icon-phone"></span>
+					<input type="text" id="telefono" class="form-control" placeholder="teléfono cliente">
+					<span class="icon icon-address"></span>
+					<input type="text" id="direccion" class="form-control" placeholder="dirección cliente">
+				</div>
+                <div class="pane" id="separacion2">
+                    <h1>
+						<img class="img-circle media-object pull-left" src="./images/2.png" width="32" height="32">
+					</h1>
+					<!--Tamaño-->
+					<ul class="list-group">
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input class="radio" type="radio" id="tamaño1" name="tamaño" value="Pequeña" checked>
+									Pequeña
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="22"
+									height="22">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="tamaño2" name="tamaño" value="Mediana">
+									Mediana
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="32"
+									height="32">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="tamaño3" name="tamaño" value="Grande">
+									Grande
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza1.png" width="42"
+									height="42">
+							</div>
+						</li>
+					</ul>
+					<!--Masa-->
+					<h1>
+						<img class="img-circle media-object pull-left" src="./images/3.png" width="32" height="32">
+					</h1>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="masa1" name="masa" value="Delgada" checked>
+									Delgada
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza2.png" width="42"
+									height="32">
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="radio">
+								<label>
+									<input type="radio" id="masa2" name="masa" value="Gruesa">
+									Gruesa
+								</label>
+								<img class="img-circle media-object pull-right" src="./images/pizza2.png" width="42"
+									height="52">
+							</div>
+						</li>
                 </div>
-                <div class="pane">
-                    <img class="img-circle media-object pull-left" src="./images/2.png" width="32"
-                        height="32" /><br /><br />
-                    <div>
-                        <input type="radio" id="small" name="sice" value="a" checked />
-                        Pequeña
-                        <img class="img-circle media-object pull-right pizza" src="./images/pizza1.png" width="30"
-                            height="30" />
-                    </div>
-                    <br />
-                    <hr />
-                    <div>
-                        <input type="radio" id="medium" name="sice" value="b" /> Mediana
-                        <img class="img-circle media-object pull-right pizza" src="./images/pizza1.png" width="40"
-                            height="40" /><br />
-                    </div>
-                    <br />
-                    <hr />
-                    <div>
-                        <input type="radio" id="big" name="sice" value="c" /> Grande
-                        <img class="img-circle media-object pull-right pizza" src="./images/pizza1.png" width="50"
-                            height="50" /><br />
-                    </div>
-                    <br /><br /><br /><br />
-                    <div>
-                        <img class="img-circle media-object pull-left" src="./images/3.png" width="32"
-                            height="32" /><br /><br />
-                        <div>
-                            <input type="radio" id="small" name="grosor" value="a" checked />
-                            Fina
-                            <img class="img-circle media-object pull-right pizza" src="./images/pizza2.png" width="50"
-                                height="30" />
-                        </div>
-                        <br />
-                        <hr />
-                        <div>
-                            <input type="radio" id="medium" name="grosor" value="b" />
-                            Gruesa
-                            <img class="img-circle media-object pull-right pizza" src="./images/pizza2.png" width="50"
-                                height="40" /><br />
-                        </div>
-                        <br />
-                    </div>
-                </div>
-                <div class="pane">
-                    <img class="img-circle media-object pull-left" src="./images/4.png" width="32"
-                        height="32" /><br /><br />
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ingredientei" value="ingredientes[i]" />
-                            Ingredientes[i]
-                        </label>
-                    </div>
+                <div class="pane" id="separacion1">
+                    <h1>
+						<img class="img-circle media-object pull-left" src="./images/4.png" width="32" height="32">
+					</h1>
+					<div id="ingredientes">
+
+					</div>
                 </div>
             </div>
+           
         </div>
         <footer class="toolbar toolbar-footer">
-            <button class="btn btn-large btn-primary aceptar">Aceptar</button>
-            <button class="btn btn-large btn-primary cancelar">Cancelar</button>
-          </footer>
-          <script src="./functions.js"></script>
-        </div>
-    </div>
+            <div class="toolbar-actions">
+                <button class="btn btn-primary pull-right" id="cancelar">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary pull-right" id="aceptar">
+                    Aceptar
+                </button>
+            </div>
+        </footer>
+        <script src="index.js"> </script>
 </body>
-
 </html>
